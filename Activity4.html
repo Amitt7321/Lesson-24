@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS HTML Methods</title>
+</head>
+<body>
+    <h1 id="main-title">Orignal Title</h1>
+    <div id="container"></div>
+    <button id="update-btn">Update Page</button>
+    <script>
+        const btn = document.getElementById("update-btn")
+         const title = document.getElementById("main-title")
+          const container = document.getElementById("#container")
+          btn.addEventListener('click', function(){
+            title.innerHTML = "Title Update via JavaScript!";
+            title.style.color="blue";   
+            const newParagraph =    document.createElement('p') 
+            newParagraph.textContent ="this is a new Paragraph added to the DOM.";
+            container.appendChild(newParagraph);
+            console.log("Update Completed.");
+          })
+    </script>
+</body>
+</html>
